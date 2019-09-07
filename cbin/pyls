@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+docker-compose build app &> /dev/null
+exec docker-compose run --rm --no-deps -T app pyls
